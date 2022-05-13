@@ -1,8 +1,7 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import Counter from './components/Counter'
-import MyForm from './components/MyForm'
+import ReducerSample from './components/ContextSample';
+import { SampleProvider } from './contexts/Sample';
 
 function App() {
   const handleSubmit = (form: { name: string; description: string }) => {
@@ -10,10 +9,9 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <MyForm onSubmit={handleSubmit} />
-      <Counter />
-    </div>
+    <SampleProvider>
+      <ReducerSample />
+    </SampleProvider>
   )
 }
 
