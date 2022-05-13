@@ -1,17 +1,11 @@
 import React from 'react'
 import './App.css'
-import ReducerSample from './components/ContextSample';
-import { SampleProvider } from './contexts/Sample';
+import CounterContainer from './containers/CounterContainer';
 
 function App() {
-  const handleSubmit = (form: { name: string; description: string }) => {
-    console.log(form)
-  }
 
   return (
-    <SampleProvider>
-      <ReducerSample />
-    </SampleProvider>
+      <CounterContainer />
   )
 }
 
